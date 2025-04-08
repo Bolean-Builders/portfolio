@@ -60,6 +60,8 @@ STYLESHEET INDEXING
 /*-------------------------
     Variables
 -------------------------*/
+
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap");
 
 :root {
@@ -147,7 +149,7 @@ ol.list-style li {
 
 ul.list-style li::marker,
 ol.list-style li::marker {
-    color: var(--color-primary);
+    color: var(--gradient-white);
 }
 
 .list-unstyled {
@@ -1186,6 +1188,8 @@ Pagination
     pointer-events: none;
     opacity: 0.5;
 }
+
+
 
 /*-------------------------
     Section Heading
@@ -2745,12 +2749,30 @@ Pagination
 /*-------------------------
     Banner
 -------------------------*/
+
+
+
 .banner {
     margin-top: -160px;
     padding: 255px 0 0;
     position: relative;
     z-index: 2;
     min-height: 800px;
+    background-image: url('../media/im.jpg');
+
+}
+.banner * {
+    position: relative;
+    z-index: 1;
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust darkness */
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -2802,7 +2824,7 @@ Pagination
 .banner .banner-content .title {
     font-size: 80px;
     font-weight: 700;
-    color: var(--color-dark);
+    color: var(--color-white);
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -2833,6 +2855,7 @@ Pagination
     font-size: var(--font-body-1);
     margin-bottom: 40px;
     width: 90%;
+    color: whitesmoke;
 }
 
 .banner .banner-content .axil-btn {
@@ -3927,26 +3950,26 @@ Pagination
 }
 
 .contact-info .phone-number {
-    font-size: 48px;
+    font-size: 28px;
     color: var(--color-accent2);
     margin-bottom: 0;
 }
 
 @media only screen and (max-width: 1199px) {
     .contact-info .phone-number {
-        font-size: 42px;
+        font-size: 25px;
     }
 }
 
 @media only screen and (max-width: 991px) {
     .contact-info .phone-number {
-        font-size: 34px;
+        font-size: 20px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .contact-info .phone-number {
-        font-size: 30px;
+        font-size: 16px;
     }
 }
 
@@ -9700,9 +9723,12 @@ body.op-modal-open {
 
 .active-dark-mode .axil-header .header-navbar .header-logo .light-version-logo {
     display: none;
+    
 }
 
 .active-dark-mode .axil-header .header-navbar .header-logo .dark-version-logo {
+    width: 80px;
+    height: 40px;
     display: block;
 }
 
@@ -9786,11 +9812,15 @@ body.op-modal-open {
 }
 
 .active-dark-mode .mobile-nav-header .mobile-nav-logo .light-mode {
-    display: none;
+    display: block;
+    width: 80px;
+    height: 40px;
 }
 
 .active-dark-mode .mobile-nav-header .mobile-nav-logo .dark-mode {
     display: block;
+    width: 80px;
+    height: 40px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -10609,3 +10639,10 @@ body.op-modal-open {
         padding-bottom: 0;
     }
 }
+
+
+
+
+
+
+
